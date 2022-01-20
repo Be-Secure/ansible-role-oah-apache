@@ -3,7 +3,7 @@ dependencies: []
 
 galaxy_info:
   role_name: apache
-  author: geerlingguy
+  author: Be-Secure
   description: Apache 2.x for Linux.
   company: "Midwestern Mac, LLC"
   license: "license (BSD, MIT)"
