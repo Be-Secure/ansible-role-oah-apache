@@ -10,6 +10,7 @@
   notify: restart apache
 
 - name: Enable Apache mods.
+  become: true
   file:
     src: "{{ apache_server_root }}/mods-available/{{ item }}"
     dest: "{{ apache_server_root }}/mods-enabled/{{ item }}"
