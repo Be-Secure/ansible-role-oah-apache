@@ -32,10 +32,11 @@
   with_items: "{{ apache_vhosts_ssl }}"
 
 - name: Add apache vhosts configuration.
+  become: true
   template:
     src: "{{ apache_vhosts_template }}"
     dest: "{{ apache_conf_path }}/sites-available/{{ apache_vhosts_filename }}"
-    owner: root
+    owner: vagrant
     group: root
     mode: 0644
   notify: restart apache
